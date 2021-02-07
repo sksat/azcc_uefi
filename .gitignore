@@ -1,6 +1,7 @@
 bios/
 mnt/
 
+main-all.c
 *.s
 *.o
 *.lib
