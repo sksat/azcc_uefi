@@ -1,0 +1,7 @@
+bios/
+mnt/
+
+*.s
+*.o
+*.lib
+*.efi

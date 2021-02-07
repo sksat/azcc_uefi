@@ -1,0 +1,3 @@
+[submodule "azcc"]
+	path = azcc
+	url = https://github.com/azarashi2931/azcc
