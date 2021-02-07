@@ -1,7 +1,11 @@
-#include <stdint.h>
+//#include <stdint.h>
+typedef char uint8_t;
+typedef unsigned short uint16_t;
+typedef unsigned int uint32_t;
+typedef unsigned long uint64_t;
 
 #define CHAR16		uint16_t
-#define UINTN		size_t
+#define UINTN		uint64_t
 
 typedef void* EFI_HANDLE;
 typedef UINTN EFI_STATUS;
@@ -30,16 +34,16 @@ typedef struct SIMPLE_TEXT_OUTPUT_PROTOCOL {
 } EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 typedef struct {
-	char _buf_rs1[24];
+	uint8_t _buf_rs1[24];
 	uint64_t _buf_rs2[4];
 	uint64_t _buf_rs3[2];
 	uint64_t _buf_rs4[3];
 	uint64_t _buf_rs5;
-	size_t __fn;
+//	size_t __fn;
 } EFI_RUNTIME_SERVICES;
 
 typedef struct {
-	char _buf[24];
+	uint8_t _buf[24];
 	uint64_t _buf2[2];
 	uint64_t _buf3[2];
 } EFI_BOOT_SERVICES;

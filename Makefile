@@ -1,7 +1,7 @@
 LDFLAGS := -subsystem:efi_application -nodefaultlib -subsystem:efi_application -dll
 
 default:
-	make by-clang
+	make by-azcc
 	make run
 
 clean:
@@ -23,7 +23,7 @@ main-all.c: main.c efi.h
 
 main.s: main-all.c
 	$(CC) $(CFLAGS) $<
-	mv main-all.s $@
+	if [ -e main-all.s ];then mv main-all.s $@; fi
 
 main.o: main.s
 	x86_64-w64-mingw32-gcc -c $< -o $@
